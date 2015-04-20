@@ -13,9 +13,23 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- Polymer imports -->
+    <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="scaffold.html">
 	</head>
 	<body unresolved>
 		<!-- <my-element> -->
+    <template is="auto-binding"
+              repeat="{{ message in messages }}">
+      <p>{{ message }}</p>
+    </template>
+    <script type="text/javascript">
+      addEventListener('template-bound', function (ev) {
+        var template = ev.target;
+        template.messages = [
+          'Hello world!',
+          'Hola mundo!'
+        ];
+      });
+    </script>
 	</body>
 </html>
