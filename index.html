@@ -14,8 +14,22 @@
 
     <!-- Polymer imports -->
     <link rel="import" href="scaffold.html">
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/core-a11y-keys/core-a11y-keys.html"
 	</head>
 	<body unresolved>
 		<!-- <my-element> -->
+    <template is="auto-binding">
+      <core-a11y-keys keys="cmd+s"
+                      on-keys-pressed="{{saveHandler}}"></core-a11y-keys>      
+    </template>                
+    <script type="text/javascript">
+      addEventListener('template-bound', function (ev) {
+        template = ev.target;
+        template.saveHandler = function (e) {
+          console.log(e.detail);
+        };
+      });
+    </script>
 	</body>
 </html>
