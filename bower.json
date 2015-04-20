@@ -1,0 +1,22 @@
+{
+  "name": "polymer-base",
+  "version": "1.0.0",
+  "authors": [
+    "Carlos Vega <carlosvega09@gmail.com>"
+  ],
+  "description": "Proyecto base para el desarrollo con Polymer",
+  "main": "app/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5",
+    "font-roboto": "Polymer/font-roboto#~0.5.5"
+  }
+}
